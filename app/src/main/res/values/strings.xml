@@ -5,4 +5,6 @@
     <string name="Telefone">Telefone</string>
     <string name="Email">Email</string>
     <string name="OK">OK</string>
+    <string name="Numero">Nº</string>
+    <string name="Bairro">Bairro</string>
 </resources>
