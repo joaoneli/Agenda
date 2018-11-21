@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cadastro">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            tools:context=".View.CadastroActivity">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColorHint="@color/colorPrimaryDark"
+                app:errorTextAppearance="@style/TextAppearance.MaterialComponents.Button"
+                app:passwordToggleEnabled="false">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Nome"
+                    android:inputType="textCapCharacters"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/etEndereco"
+/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilEndereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:errorTextAppearance="@style/TextAppearance.MaterialComponents.Button">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etEndereco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Endereco"
+                    android:inputType="textCapCharacters"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/etTelefone"
+                   />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilTelefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:errorTextAppearance="@style/TextAppearance.MaterialComponents.Button">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etTelefone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Telefone"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/etEmail"
+                  />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:errorTextAppearance="@style/TextAppearance.MaterialComponents.Button">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Email"
+                    android:maxLines="1"
+                    android:inputType="textEmailAddress"
+                  />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabConfirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/ic_check_black" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabDeletar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/fabConfirmar"
+        app:srcCompat="@drawable/ic_delete_forever_black" />
+
+</android.support.constraint.ConstraintLayout>
