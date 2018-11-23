@@ -7,32 +7,78 @@
     >
 
     <TextView
-        android:textSize="24sp"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="bold"
         android:id="@+id/tvNome"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"  />
+        android:layout_height="wrap_content"
+        android:textColor="@color/preto"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-    <TextView
-        android:textSize="16sp"
-        android:textColor="@color/colorPrimaryDark"
-        android:id="@+id/tvEndereco"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"  />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/tvEndereco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/back02"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tvVirgula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=", "
+            android:textColor="@color/back02"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvNumero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/back02"
+            android:textSize="16sp" />
+
+    </LinearLayout>
     <TextView
-        android:textSize="16sp"
-        android:textColor="@color/colorPrimaryDark"
-        android:id="@+id/tvTelefone"
+        android:id="@+id/tvBairro"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"  />
+        android:layout_height="wrap_content"
+        android:textColor="@color/back02"
+        android:textSize="16sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCodigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/back02"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tvEspaco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@color/back02"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tvTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/back02"
+            android:textSize="16sp" />
+    </LinearLayout>
 
     <TextView
-        android:textSize="16sp"
-        android:textColor="@color/colorPrimaryDark"
         android:id="@+id/tvEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"  />
+        android:layout_height="wrap_content"
+        android:textColor="@color/back02"
+        android:textSize="16sp" />
 
 </LinearLayout>

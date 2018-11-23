@@ -107,6 +107,9 @@ public class Index extends AppCompatActivity {
                                            TextView tvEndereco;
                                            TextView tvTelefone;
                                            TextView tvEmail;
+                                           TextView tvBairro;
+                                           TextView tvNumero;
+                                           TextView tvCodigo;
                                        }
 
                                        @Override
@@ -135,6 +138,9 @@ public class Index extends AppCompatActivity {
                                                viewHolder.tvEndereco = convertView.findViewById(R.id.tvEndereco);
                                                viewHolder.tvTelefone = convertView.findViewById(R.id.tvTelefone);
                                                viewHolder.tvEmail = convertView.findViewById(R.id.tvEmail);
+                                               viewHolder.tvBairro = convertView.findViewById(R.id.tvBairro);
+                                               viewHolder.tvCodigo = convertView.findViewById(R.id.tvCodigo);
+                                               viewHolder.tvNumero = convertView.findViewById(R.id.tvNumero);
 
                                            }
                                            else
@@ -144,6 +150,9 @@ public class Index extends AppCompatActivity {
                                            viewHolder.tvEndereco.setText(item.getData().getEndereco().getIv());
                                            viewHolder.tvTelefone.setText(item.getData().getTelefone().getIv());
                                            viewHolder.tvEmail.setText(item.getData().getEmail().getIv());
+                                           viewHolder.tvNumero.setText(item.getData().getNumero().getIv());
+                                           viewHolder.tvCodigo.setText(item.getData().getCodigo().getIv());
+                                           viewHolder.tvBairro.setText(item.getData().getBairro().getIv());
 
                                            //
                                            return convertView;

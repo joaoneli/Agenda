@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import org.json.JSONException;
 
@@ -27,6 +29,11 @@ public class Cadastro extends AppCompatActivity {
     private TextInputEditText etTelefone;
     private TextInputLayout tilEmail;
     private TextInputEditText etEmail;
+    private TextInputLayout tilNumero;
+    private TextInputEditText etNumero;
+    private TextInputLayout tilBairro;
+    private TextInputEditText etBairro;
+    private Spinner spCodigo;
 
     //
     private Item item;
@@ -35,6 +42,7 @@ public class Cadastro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
         inicializaComponentes();
+
         //
         item = (Item) getIntent().getSerializableExtra(Index.EXTRA_REGISTRO);
         //
@@ -51,6 +59,14 @@ public class Cadastro extends AppCompatActivity {
         etTelefone = findViewById(R.id.etTelefone);
         tilEmail = findViewById(R.id.tilEmail);
         etEmail = findViewById(R.id.etEmail);
+        tilNumero = findViewById(R.id.tilNumero);
+        etNumero = findViewById(R.id.etNumero);
+        tilBairro = findViewById(R.id.tilBairro);
+        etBairro = findViewById(R.id.etBairro);
+        spCodigo = findViewById(R.id.spCodigo);
+
+
+
 
 
         FloatingActionButton fabConfirmar = findViewById(R.id.fabConfirmar);
@@ -158,6 +174,7 @@ public class Cadastro extends AppCompatActivity {
         });
     }
 
+
     private boolean validaTela()
     {
         boolean retorno = true;
@@ -184,6 +201,12 @@ public class Cadastro extends AppCompatActivity {
             tilEmail.setError("Informe o email");
             retorno = false;
         }
+        //
+        if (spCodigo.getSelectedItemPosition() <= 0) {
+            PopupInformacao.mostraMensagem(this, "Selecione o tipo!");
+            retorno = false;
+        }
+
         return retorno;
     }
 
@@ -202,6 +225,9 @@ public class Cadastro extends AppCompatActivity {
         data.setEndereco(new StringValue(etEndereco.getText().toString()));
         data.setTelefone(new StringValue(etTelefone.getText().toString()));
         data.setEmail(new StringValue(etEmail.getText().toString()));
+        data.setNumero(new StringValue(etNumero.getText().toString()));
+        data.setBairro(new StringValue(etBairro.getText().toString()));
+        data.setCodigo(new StringValue(spCodigo.getSelectedItem().toString()));
 
 
         try
@@ -256,6 +282,17 @@ public class Cadastro extends AppCompatActivity {
             etNome.setText(item.getData().getNome().getIv());
             etTelefone.setText(item.getData().getTelefone().getIv());
             etEmail.setText(item.getData().getEmail().getIv());
+            etBairro.setText(item.getData().getBairro().getIv());
+            etNumero.setText(item.getData().getNumero().getIv());
+
+            for (int i = 1; i < spCodigo.getCount(); i++) {
+                if (((String) spCodigo.getItemAtPosition(i)).equals(item.getData().getCodigo().getIv())) {
+                    spCodigo.setSelection(i, true);
+                    break;
+                }
+            }
+
+
         }
     }
 
