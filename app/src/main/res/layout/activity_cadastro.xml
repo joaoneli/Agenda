@@ -35,7 +35,8 @@
                     android:hint="@string/Nome"
                     android:inputType="textCapCharacters"
                     android:maxLines="1"
-                    android:nextFocusDown="@id/etEndereco" />
+                    android:nextFocusDown="@id/etEndereco"
+                    android:background="@drawable/edit_text_round_border"/>
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
@@ -57,7 +58,8 @@
                         android:hint="@string/Endereco"
                         android:inputType="textCapCharacters"
                         android:maxLines="1"
-                        android:nextFocusDown="@id/etNumero" />
+                        android:nextFocusDown="@id/etNumero"
+                        android:background="@drawable/edit_text_round_border"/>
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -74,7 +76,8 @@
                         android:hint="@string/Numero"
                         android:inputType="textCapCharacters"
                         android:maxLines="1"
-                        android:nextFocusDown="@id/etBairro" />
+                        android:nextFocusDown="@id/etBairro"
+                        android:background="@drawable/edit_text_round_border"/>
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
@@ -94,7 +97,8 @@
                     android:hint="@string/Bairro"
                     android:inputType="textCapCharacters"
                     android:maxLines="1"
-                    android:nextFocusDown="@id/spCodigo" />
+                    android:nextFocusDown="@id/spCodigo"
+                    android:background="@drawable/edit_text_round_border"/>
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
@@ -108,7 +112,8 @@
                     android:layout_height="match_parent"
                     android:entries="@array/codigo"
                     android:nextFocusDown="@id/etTelefone"
-                    android:prompt="@string/codigo" />
+                    android:prompt="@string/codigo"
+                    android:background="@drawable/edit_text_round_border"/>
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/tilTelefone"
@@ -124,7 +129,8 @@
                         android:hint="@string/Telefone"
                         android:inputType="phone"
                         android:maxLines="1"
-                        android:nextFocusDown="@id/etEmail" />
+                        android:nextFocusDown="@id/etEmail"
+                        android:background="@drawable/edit_text_round_border"/>
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
@@ -142,6 +148,8 @@
                     android:hint="@string/Email"
                     android:maxLines="1"
                     android:inputType="textEmailAddress"
+                    android:background="@drawable/edit_text_round_border"
+
                   />
             </android.support.design.widget.TextInputLayout>
 
