@@ -35,6 +35,9 @@ public class Index extends AppCompatActivity {
     private TesteSquidexInfo listContatos;
     private String Telefone;
     private String Endereco;
+    private String Bairro;
+    private String Numero;
+    private String Codigo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,6 +94,9 @@ public class Index extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Telefone = listContatos.getItems()[position].getData().getTelefone().getIv();
                 Endereco = listContatos.getItems()[position].getData().getEndereco().getIv();
+                Bairro = listContatos.getItems()[position].getData().getBairro().getIv();
+                Numero = listContatos.getItems()[position].getData().getNumero().getIv();
+                Codigo = listContatos.getItems()[position].getData().getCodigo().getIv();
                 return false;
             }
         });
@@ -207,7 +213,7 @@ public class Index extends AppCompatActivity {
                             new String[]{Manifest.permission.CALL_PHONE}, 123);
                 } else {
                     Intent intentLigar = new Intent(Intent.ACTION_CALL);
-                    intentLigar.setData(Uri.parse("tel:" + Telefone));
+                    intentLigar.setData(Uri.parse("tel:" + Codigo + Telefone));
                     startActivity(intentLigar);
                     Toast.makeText(getApplicationContext(), "Telefonando", Toast.LENGTH_LONG).show();
                 }
@@ -215,13 +221,13 @@ public class Index extends AppCompatActivity {
 
         else if(item.getItemId()==R.id.sms){
             Intent intentSMS = new Intent(Intent.ACTION_VIEW);
-            intentSMS.setData(Uri.parse("sms:" + Telefone));
+            intentSMS.setData(Uri.parse("sms:" +Codigo + Telefone));
             startActivity(intentSMS);
             Toast.makeText(getApplicationContext(),"Abrindo mensagens",Toast.LENGTH_LONG).show();
         }
         else if(item.getItemId()==R.id.mapa){
             Intent intentMapa = new Intent(Intent.ACTION_VIEW);
-            intentMapa.setData(Uri.parse("geo:0,0?q=" + Endereco));
+            intentMapa.setData(Uri.parse("geo:0,0?q=" + Endereco + Bairro + Numero));
             startActivity(intentMapa);
             Toast.makeText(getApplicationContext(),"Abrindo mapa",Toast.LENGTH_LONG).show();
         }
