@@ -19,6 +19,7 @@
         <item name="listPreferredItemHeightSmall">50dp</item>
         <item name="android:listSeparatorTextViewStyle">@drawable/border_gradient</item>
         <item name="android:listDivider">@drawable/border_gradient</item>
+        <item name="android:fontFamily">@font/josefin</item>
     </style>
 
 </resources>

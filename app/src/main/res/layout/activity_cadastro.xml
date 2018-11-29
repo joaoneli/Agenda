@@ -25,6 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColorHint="@color/white"
+                android:fontFamily="@font/josefin"
                 app:errorTextAppearance="@style/TextAppearance.MaterialComponents.Button"
                 app:passwordToggleEnabled="false">
 
@@ -36,6 +37,7 @@
                     android:background="@drawable/edit_text_round_border"
                     android:inputType="textCapCharacters"
                     android:textColor="@color/white"
+                    android:fontFamily="@font/josefin"
                     android:maxLines="1"
                     android:nextFocusDown="@id/etEndereco" />
             </android.support.design.widget.TextInputLayout>
@@ -49,6 +51,7 @@
                     android:id="@+id/tilEndereco"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin"
                     android:layout_marginTop="15dp"
                     android:textColorHint="@color/white"
                     app:errorTextAppearance="@style/TextAppearance.MaterialComponents.Button">
@@ -60,6 +63,7 @@
                         android:background="@drawable/edit_text_round_border"
                         android:hint="@string/Endereco"
                         android:inputType="textCapCharacters"
+                        android:fontFamily="@font/josefin"
                         android:textColor="@color/white"
                         android:maxLines="1"
                         android:nextFocusDown="@id/etNumero" />
@@ -70,6 +74,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
+                    android:fontFamily="@font/josefin"
                     android:textColorHint="@color/white"
                     app:errorTextAppearance="@style/TextAppearance.MaterialComponents.Button">
 
@@ -81,6 +86,7 @@
                         android:background="@drawable/edit_text_round_border"
                         android:hint="@string/Numero"
                         android:inputType="textCapCharacters"
+                        android:fontFamily="@font/josefin"
                         android:textColor="@color/white"
                         android:maxLines="1"
                         android:nextFocusDown="@id/etBairro" />
@@ -93,6 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:textColorHint="@color/white"
+                android:fontFamily="@font/josefin"
                 app:errorTextAppearance="@style/TextAppearance.MaterialComponents.Button"
                 app:passwordToggleEnabled="false">
 
@@ -104,6 +111,7 @@
                     android:hint="@string/Bairro"
                     android:inputType="textCapCharacters"
                     android:textColor="@color/white"
+                    android:fontFamily="@font/josefin"
                     android:maxLines="1"
                     android:nextFocusDown="@id/tilTelefone" />
             </android.support.design.widget.TextInputLayout>
@@ -114,6 +122,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:textColorHint="@color/white"
+                    android:fontFamily="@font/josefin"
                     app:errorTextAppearance="@style/TextAppearance.MaterialComponents.Button">
 
                     <android.support.design.widget.TextInputEditText
@@ -124,6 +133,7 @@
                         android:hint="@string/Telefone"
                         android:inputType="phone"
                         android:maxLines="1"
+                        android:fontFamily="@font/josefin"
                         android:textColor="@color/white"
                         android:nextFocusDown="@id/etEmail" />
                 </android.support.design.widget.TextInputLayout>
@@ -133,6 +143,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:fontFamily="@font/josefin"
                 android:textColorHint="@color/white"
                 app:errorTextAppearance="@style/TextAppearance.MaterialComponents.Button">
 
@@ -144,6 +155,7 @@
                     android:hint="@string/Email"
                     android:textColor="@color/white"
                     android:inputType="textEmailAddress"
+                    android:fontFamily="@font/josefin"
                     android:maxLines="1"
 
                     />
