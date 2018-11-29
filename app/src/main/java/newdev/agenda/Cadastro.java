@@ -33,8 +33,6 @@ public class Cadastro extends AppCompatActivity {
     private TextInputEditText etNumero;
     private TextInputLayout tilBairro;
     private TextInputEditText etBairro;
-    private Spinner spCodigo;
-
     //
     private Item item;
     @Override
@@ -63,8 +61,6 @@ public class Cadastro extends AppCompatActivity {
         etNumero = findViewById(R.id.etNumero);
         tilBairro = findViewById(R.id.tilBairro);
         etBairro = findViewById(R.id.etBairro);
-        spCodigo = findViewById(R.id.spCodigo);
-
 
 
 
@@ -256,11 +252,6 @@ public class Cadastro extends AppCompatActivity {
             retorno = false;
         }
         //
-        if (spCodigo.getSelectedItemPosition() <= 0) {
-            PopupInformacao.mostraMensagem(this, "Selecione o DDI!");
-            retorno = false;
-        }
-
         return retorno;
     }
 
@@ -281,7 +272,6 @@ public class Cadastro extends AppCompatActivity {
         data.setEmail(new StringValue(etEmail.getText().toString()));
         data.setNumero(new StringValue(etNumero.getText().toString()));
         data.setBairro(new StringValue(etBairro.getText().toString()));
-        data.setCodigo(new StringValue(spCodigo.getSelectedItem().toString()));
 
 
         try
@@ -338,15 +328,6 @@ public class Cadastro extends AppCompatActivity {
             etEmail.setText(item.getData().getEmail().getIv());
             etBairro.setText(item.getData().getBairro().getIv());
             etNumero.setText(item.getData().getNumero().getIv());
-
-            for (int i = 1; i < spCodigo.getCount(); i++) {
-                if (((String) spCodigo.getItemAtPosition(i)).equals(item.getData().getCodigo().getIv())) {
-                    spCodigo.setSelection(i, true);
-                    break;
-                }
-            }
-
-
         }
     }
 

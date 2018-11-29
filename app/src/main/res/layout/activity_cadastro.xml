@@ -97,23 +97,9 @@
                     android:hint="@string/Bairro"
                     android:inputType="textCapCharacters"
                     android:maxLines="1"
-                    android:nextFocusDown="@id/spCodigo"
+                    android:nextFocusDown="@id/tilTelefone"
                     android:background="@drawable/edit_text_round_border"/>
             </android.support.design.widget.TextInputLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Spinner
-                    android:id="@+id/spCodigo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:entries="@array/codigo"
-                    android:nextFocusDown="@id/etTelefone"
-                    android:prompt="@string/codigo"
-                    android:background="@drawable/edit_text_round_border"/>
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/tilTelefone"
@@ -132,7 +118,6 @@
                         android:nextFocusDown="@id/etEmail"
                         android:background="@drawable/edit_text_round_border"/>
                 </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/tilEmail"

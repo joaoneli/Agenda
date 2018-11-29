@@ -37,7 +37,7 @@ public class Index extends AppCompatActivity {
     private String Endereco;
     private String Bairro;
     private String Numero;
-    private String Codigo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,7 +96,6 @@ public class Index extends AppCompatActivity {
                 Endereco = listContatos.getItems()[position].getData().getEndereco().getIv();
                 Bairro = listContatos.getItems()[position].getData().getBairro().getIv();
                 Numero = listContatos.getItems()[position].getData().getNumero().getIv();
-                Codigo = listContatos.getItems()[position].getData().getCodigo().getIv();
                 return false;
             }
         });
@@ -115,8 +114,7 @@ public class Index extends AppCompatActivity {
                                            TextView tvEmail;
                                            TextView tvBairro;
                                            TextView tvNumero;
-                                           TextView tvCodigo;
-                                       }
+                                                               }
 
                                        @Override
                                        public int getCount()
@@ -145,7 +143,6 @@ public class Index extends AppCompatActivity {
                                                viewHolder.tvTelefone = convertView.findViewById(R.id.tvTelefone);
                                                viewHolder.tvEmail = convertView.findViewById(R.id.tvEmail);
                                                viewHolder.tvBairro = convertView.findViewById(R.id.tvBairro);
-                                               viewHolder.tvCodigo = convertView.findViewById(R.id.tvCodigo);
                                                viewHolder.tvNumero = convertView.findViewById(R.id.tvNumero);
 
                                            }
@@ -157,7 +154,6 @@ public class Index extends AppCompatActivity {
                                            viewHolder.tvTelefone.setText(item.getData().getTelefone().getIv());
                                            viewHolder.tvEmail.setText(item.getData().getEmail().getIv());
                                            viewHolder.tvNumero.setText(item.getData().getNumero().getIv());
-                                           viewHolder.tvCodigo.setText(item.getData().getCodigo().getIv());
                                            viewHolder.tvBairro.setText(item.getData().getBairro().getIv());
 
                                            //
@@ -213,7 +209,7 @@ public class Index extends AppCompatActivity {
                             new String[]{Manifest.permission.CALL_PHONE}, 123);
                 } else {
                     Intent intentLigar = new Intent(Intent.ACTION_CALL);
-                    intentLigar.setData(Uri.parse("tel:" + Codigo + Telefone));
+                    intentLigar.setData(Uri.parse("tel:"  + Telefone));
                     startActivity(intentLigar);
                     Toast.makeText(getApplicationContext(), "Telefonando", Toast.LENGTH_LONG).show();
                 }
@@ -221,7 +217,7 @@ public class Index extends AppCompatActivity {
 
         else if(item.getItemId()==R.id.sms){
             Intent intentSMS = new Intent(Intent.ACTION_VIEW);
-            intentSMS.setData(Uri.parse("sms:" +Codigo + Telefone));
+            intentSMS.setData(Uri.parse("sms:"  + Telefone));
             startActivity(intentSMS);
             Toast.makeText(getApplicationContext(),"Abrindo mensagens",Toast.LENGTH_LONG).show();
         }
