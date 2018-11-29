@@ -1,11 +1,24 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.Design.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorLight</item>
+        <item name="android:statusBarColor">@color/colorLight</item>
+        <item name="android:windowBackground">@color/colorDark</item>
+    </style>
+    <style name="WindowTitleBackground">
+        <item name="android:background">#000</item>
+    </style>
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:listPreferredItemHeightSmall">50dp</item>
+        <item name="listPreferredItemHeightSmall">50dp</item>
+        <item name="android:listSeparatorTextViewStyle">@drawable/border_gradient</item>
+        <item name="android:listDivider">@drawable/border_gradient</item>
     </style>
 
 </resources>
