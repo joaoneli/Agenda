@@ -154,6 +154,48 @@ public class Cadastro extends AppCompatActivity {
             }
         });
 
+        etBairro.addTextChangedListener(new TextWatcher()
+        {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after)
+            {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count)
+            {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s)
+            {
+                tilBairro.setError(null);
+            }
+        });
+
+        etNumero.addTextChangedListener(new TextWatcher()
+        {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after)
+            {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count)
+            {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s)
+            {
+                tilNumero.setError(null);
+            }
+        });
+
         //
         fabConfirmar.setOnClickListener(new View.OnClickListener()
         {
@@ -202,8 +244,20 @@ public class Cadastro extends AppCompatActivity {
             retorno = false;
         }
         //
+        if (etNumero.getText().toString().trim().length() == 0)
+        {
+            tilNumero.setError("N?");
+            retorno = false;
+        }
+        //
+        if (etBairro.getText().toString().trim().length() == 0)
+        {
+            tilBairro.setError("Informe o bairro");
+            retorno = false;
+        }
+        //
         if (spCodigo.getSelectedItemPosition() <= 0) {
-            PopupInformacao.mostraMensagem(this, "Selecione o tipo!");
+            PopupInformacao.mostraMensagem(this, "Selecione o DDI!");
             retorno = false;
         }
 

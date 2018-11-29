@@ -7,9 +7,10 @@
     <string name="OK">OK</string>
     <string name="Numero">Nº</string>
     <string name="Bairro">Bairro</string>
-    <string name="codigo">+00</string>
+    <string name="codigo">+DDI</string>
 
     <string-array name="codigo">
+        <item>	DDI	</item>
         <item>	+00	</item>
         <item>	+1	</item>
         <item>	+7	</item>
